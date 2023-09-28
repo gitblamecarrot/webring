@@ -52,13 +52,23 @@ const server = Bun.serve({
 
 
 
-        return new Response(`Welcome to webring.wtf
+        return new Response(`             _           _                          ___ 
+            | |         (_)                   _    / __)
+ _ _ _  ____| | _   ____ _ ____   ____  _ _ _| |_ | |__ 
+| | | |/ _  ) || \\ / ___) |  _ \\ / _  || | | |  _)|  __)
+| | | ( (/ /| |_) ) |   | | | | ( ( | || | | | |__| |   
+ \\____|\\____)____/|_|   |_|_| |_|\\_|| (_)____|\\___)_|   
+                                (_____|                
 
-Let your site visitors explore other neat Nounish websites!
+Let's webring like it's the year 2000 and make it even easier to disover other cool
+Nounish websites. For you youngsters: webrings are collections of websites that agree
+to link to one another in a circle; someone lands on a site and clicks "Next", then
+on to the next one, which also has the "Next" button. This makes discovering new things
+even easier and fun!
 
-Join the webring by adding your website(s) domain to one of the rings like:
+Join the webring by adding your website(s) to one of the rings like:
 
-Nouns ring: https://github.com/gitblamecarrot/webring/blob/main/rings/nouns.txt
+1. Nouns ring: https://github.com/gitblamecarrot/webring/blob/main/rings/nouns.txt
 
 Then just add the links like the following to your site:
 
@@ -69,8 +79,17 @@ Then just add the links like the following to your site:
 <a href="https://webring.wtf/nouns/next/<your domain>" rel="noreferrer">Next</a>
 </div>
 
+
+Details:
+
 webring.wtf will not retain traffic logs but may record total query counts in the
 future to judge usage.
+
+webring.wtf is implemented as a centralized service because loading remote JavaScript
+onto websites in Web3 is a bad idea! Instead, we just can just link here and the robots
+will shuttle viewers on to the next one.
+
+Have questions? Reach out to @devcarrot on Warpcast.
         `)
     },
 });

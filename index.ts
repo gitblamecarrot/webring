@@ -16,7 +16,7 @@ const ringFiles: RingMap = await readdirSync(ringsDir).filter(
 const server = Bun.serve({
     port: 3000,
     fetch(request) {
-        const [ring, action, ...sourceParts] = request.url.replace(/https?:\/\/[^\/]+\//, '').replaceAll('..', '').split('/')
+        const [ring, action, ...sourceParts] = request.url.replace(/https?:\/\/[^\/]+\//, '').split('/')
         const source = sourceParts.join('/')
 
         if(action === 'random') {
@@ -66,11 +66,9 @@ to link to one another in a circle; someone lands on a site and clicks "Next", t
 on to the next one, which also has the "Next" button. This makes discovering new things
 even easier and fun!
 
-Join the webring by adding your website(s) to one of the rings like:
+Join the webring by adding links like the following to your Nounish website:
 
-1. Nouns ring: https://github.com/gitblamecarrot/webring/blob/main/rings/nouns.txt
-
-Then just add the links like the following to your site:
+! <your domain> is the part without the https://, webring.wtf will force everything to https
 
 <i>Explore the Nouns webring!</i>
 <div style="grid grid-col">
@@ -78,6 +76,12 @@ Then just add the links like the following to your site:
 <a href="https://webring.wtf/nouns/random/<your domain>" rel="noreferrer">Random</a>
 <a href="https://webring.wtf/nouns/next/<your domain>" rel="noreferrer">Next</a>
 </div>
+
+Then add your domain(s) to the ring list here via pull request or messaging devcarrot:
+
+1. Nouns ring: https://github.com/gitblamecarrot/webring/blob/main/rings/nouns.txt
+
+Then just add the links like the following to your site:
 
 
 Details:
